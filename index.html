@@ -22,12 +22,12 @@
     </header>  
 
     <section class="home">
-        <video src="video1.mp4" muted autoplay loop class="video-slider active"></video>
-        <video src="video1.mp4" muted autoplay loop class="video-slider"></video>
-        <video src="video2.mp4" muted autoplay loop class="video-slider"></video>
-        <video src="video3.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="./assets/video1.mp4" muted autoplay loop class="video-slider active"></video>
+        <video src="./assets/video2.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="./assets/video3.mp4" muted autoplay loop class="video-slider"></video>
+        <video src="./assets/video4.mp4" muted autoplay loop class="video-slider"></video>
         <div class="content active">
-            <h1>Wonderful, <br><span>Island </span></h1>
+            <h1>Bueatiful, <br><span>Island </span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores necessitatibus obcaecati nobis voluptatum culpa voluptates alias provident ut aliquam aut, voluptatem et quaerat aspernatur. Nemo, tempore quidem. Ipsa, dolor?</p>
             <a href="#">Read More</a>
         </div>
@@ -58,22 +58,23 @@
             <div class="nav-btn"></div>
         </div>
     </section>
+
     <script>
         // javascript for  video slider Navigation
 
         const btns = document.querySelectorAll('.nav-btn');
         const slides = document.querySelectorAll('.video-slider');
-        const content = document.querySelectorAll('.content');
+        const contents = document.querySelectorAll('.content');
 
         var sliderNav = function(index) {
             btns.forEach((btn) => {
                 btn.classList.remove('active');
             });
             slides.forEach((slide) => {
-                slide.clssList.remove('active');
+                slide.classList.remove('active');
             });
-            content.forEach((content) => {
-                content.clssList.remove('active');
+            contents.forEach((content) => {
+                content.classList.remove('active');
             });
 
             btns[index].classList.add('active');
